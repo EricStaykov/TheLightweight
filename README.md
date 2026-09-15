@@ -1,15 +1,14 @@
-# The Lightweight - Pattern Programmer
+# The Lightweight
 
-This is a desktop application for designing, previewing and uploading custom LED lighting patterns to The Lightweight device over USB. Build animations visually by dragging colour-and-timing "step blocks" into a sequence, preview them on screen, then push them straight to the device's memory.
-
-This manual covers installation, the full interface and every feature of the app.
+The Lightweight is a running/walking/cycling light with four RGB (red, green, blue) lights arranged in a square. It can display up to ten sequences that are fully customisable using the software.
 
 ---
 
 ## Table of Contents
 
 - [Requirements](#requirements)
-- [Installation](#installation)
+- [Device Operation)(#device-operation)
+- [The Lightweight - Pattern Programmer](#software-intro)
   - [Windows](#windows)
   - [macOS](#macos)
 - [Connecting Your Device](#connecting-your-device)
@@ -17,19 +16,33 @@ This manual covers installation, the full interface and every feature of the app
 - [Building a Pattern](#building-a-pattern)
 - [Previewing a Pattern](#previewing-a-pattern)
 - [Working with the Device](#working-with-the-device)
-  - [Set Active Mode](#set-active-mode)
+  - [Set Active Sequence](#set-active-sequence)
   - [Live Colour Preview](#live-colour-preview)
   - [Upload / Download a Single Sequence](#upload--download-a-single-sequence)
   - [Download All / Upload All Sequences](#download-all--upload-all-sequences)
   - [Reset Patterns to Default](#reset-patterns-to-default)
-- [The .sequence File Format](#the-sequence-file-format)
+- [The Sequence File Format](#the-sequence-file-format)
 - [Menu Bar](#menu-bar)
 - [Troubleshooting](#troubleshooting)
 - [FAQ](#faq)
 
 ---
 
-## Requirements
+## Device Operation
+
+Once configured, The Lightweight device can be operated independently of the computer using its built-in touch sensor.
+
+* **Power Toggle:** Tap the sensor using your assigned power configuration to turn the device on or off, which defaults to 2 taps.
+
+* **Mode/Sequence Cycling:** Tap the sensor using your assigned mode/sequence configuration to cycle through your enabled sequences, which defaults to 1 tap.
+
+---
+
+## The Lightweight - Pattern Programmer
+
+This is a desktop application for designing, previewing and uploading custom LED lighting patterns to The Lightweight device over USB. Build animations visually by dragging colour-and-timing "step blocks" into a sequence, preview them on screen, then push them straight to the device's memory.
+
+**Requirements:**
 
 - Windows 10/11 (64-bit) or macOS 15+
 - The Lightweight device connected via a USB-C cable
@@ -74,7 +87,7 @@ The window is split into two halves:
 | Side | Panel | Purpose |
 |---|---|---|
 | Left | Pattern Builder | Design a sequence of colour/timing steps and preview it on screen |
-| Right | Device Panel | Connect to the hardware and send/receive patterns, live colours and mode changes |
+| Right | Device Panel | Connect to the hardware and send/receive patterns, live colours and sequence changes |
 
 A menu bar across the top gives you theme switching, help, update checks and app info.
 
@@ -119,9 +132,9 @@ This lets you fine-tune timing and colours before spending time uploading to har
 
 All of the controls below live in the Device Panel on the right and require an active connection.
 
-### Set Active Mode
+### Set Active Sequence
 
-The device stores up to 10 mode slots (Mode 1–10), each holding one pattern. Use the Set Active Mode box to pick a Mode# and click Set to make that slot the one currently playing on the device.
+The device stores up to 10 sequences (1–10). Use the Set Active Sequence box to pick a Sequence# and click Set to make that slot the one currently playing on the device.
 
 ### Live Colour Preview
 
@@ -129,17 +142,17 @@ Use the four colour swatches in Live Colour Preview to pick a one-off colour for
 
 ### Upload / Download a Single Sequence
 
-- ↑ Upload Sequence to The Lightweight - sends the pattern currently in the Pattern Builder to the Mode# slot you select, overwriting whatever was stored there.
-- ↓ Download Sequence into Builder - pulls whatever is stored in the selected Mode# slot on the device back into the Pattern Builder, so you can inspect or edit it.
+- ↑ Upload Sequence to The Lightweight - sends the pattern currently in the Pattern Builder to the Sequence# you select, overwriting whatever was stored there.
+- ↓ Download Sequence into Builder - pulls whatever is stored in the selected Sequence# on the device back into the Pattern Builder, so you can inspect or edit it.
 
 ### Download All / Upload All Sequences
 
-For backing up or restoring every mode slot at once:
+For backing up or restoring every sequence at once:
 
-- ↓ Download All Sequences - reads all 10 mode slots off the device and saves them to a `.sequence` text file of your choosing. Use this to back up your device's configuration before experimenting.
-- ↑ Upload All Sequences - loads a `.sequence` file from disk, validates it and (after you confirm) overwrites all 10 slots on the device with its contents. This is destructive and cannot be undone, so the app always asks for confirmation first.
+- ↓ Download All Sequences - reads all 10 sequences off the device and saves them to a `.txt` text file of your choosing. Use this to back up your device's configuration before experimenting.
+- ↑ Upload All Sequences - loads a sequence `.txt` file from disk, validates it and (after you confirm) overwrites all 10 slots on the device with its contents. This is destructive and cannot be undone, so the app always asks for confirmation first.
 
-See [The .sequence File Format](#the-sequence-file-format) below if you want to hand-edit these files or generate them programmatically.
+See [The Sequence File Format](#the-sequence-file-format) below if you want to hand-edit these files or generate them programmatically.
 
 ### Reset Patterns to Default
 
@@ -147,9 +160,9 @@ Reset Patterns to Default restores the device's built-in factory patterns, erasi
 
 ---
 
-## The .sequence File Format
+## The Sequence File Format
 
-`.sequence` files are plain text and human-readable, so you can inspect, back up, version-control, or hand-edit them.
+Sequence `.txt` files are plain text and human-readable, so you can inspect, back up, version-control, or hand-edit them.
 
 ```
 # THE_LIGHTWEIGHT_SEQUENCES v1
@@ -163,12 +176,12 @@ STEP type=0 duration=1000 colours=0,0,0;0,0,0;0,0,0;0,0,0
 ```
 
 - Lines starting with `#` are comments and are ignored.
-- `[MODE n]` starts a new mode slot, where `n` is between 1 and 10. Every mode is listed once, even if it has no steps.
+- `[MODE n]` starts a new sequence, where `n` is between 1 and 10. Every sequence is listed once, even if it has no steps.
 - Each `STEP` line under a mode defines one animation step:
   - `type` - `0` for Solid, `1` for Transition
   - `duration` - step length in milliseconds (0–65535)
   - `colours` - four semicolon-separated `r,g,b` triples (0–255 each), in the order Top-Left; Top-Right; Bottom-Right; Bottom-Left
-- A mode may have up to 64 steps.
+- A sequence may have up to 64 steps.
 
 If a file doesn't follow this format exactly, Upload All Sequences will reject it, rather than sending anything to the device.
 
@@ -210,7 +223,7 @@ Uploading or downloading sequences randomly fails
 Yes - you can build and play back patterns entirely in the Pattern Builder without ever connecting hardware. You only need a connection to write to or read from the device itself.
 
 **How many patterns can the device store?**
-10 mode slots, each holding up to 64 steps.
+10 sequences, each holding up to 64 steps.
 
 **What's the difference between Solid and Transition steps?**
 Solid holds a fixed colour for the whole step. Transition fades from the previous step's colours into this step's colours over the step's duration, creating a smooth crossfade.
