@@ -287,7 +287,7 @@ If a file doesn't follow this format exactly, Upload All Sequences will reject i
 - Click More info → Run anyway.
 
 **Uploading or downloading sequences randomly fails**
-- This might be caused by USB noise or a marginal cable/connection corrupting a byte in transit. Every packet is checksummed, so a corrupted packet is always detected and dropped rather than being written to the device - but the app does not automatically retry, so the current operation will report a failure or time out. Simply try the action again. If it happens constantly, try a shorter or better-shielded USB cable.
+- This might be caused by USB noise or a marginal cable/connection corrupting a byte in transit. Simply try the action again. If it happens constantly, try a shorter or better-shielded USB cable.
 
 ---
 
