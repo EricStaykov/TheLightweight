@@ -1,12 +1,15 @@
 # The Lightweight
 
-The Lightweight is a running/walking/cycling light with four RGB (red, green, blue) lights arranged in a square. It can display up to ten sequences that are fully customisable using the software running on Windows or macOS by connecting the device via a standard USB-C cable. The light is rechargeable with the same USB-C cable from a 5V DC power source such as a computer or phone charger.
+![Use Cases for The Lightweight](Images/use_cases.jpg)
 
----
+The Lightweight is a running/cycling/walking light with four RGB (red, green, blue) lights arranged in a square. It can display up to ten sequences that are fully customisable using the software running on Windows or macOS by connecting the device via a standard USB-C cable. To access the USB-C port, unscrew the lid of the enclosure. The light is rechargeable with the same USB-C cable from a 5V DC power source such as a computer or phone charger. The Lightweight comes with a separate magnetic attachment so that it can be attached to clothing or a backpack.
+
+![Magnetic Attachment](Images/magnetic_attachment.jpg)
 
 ## Table of Contents
 
 - [Requirements](#requirements)
+- [Safety](#safety)
 - [Device Operation](#device-operation)
 - [The Lightweight - Sequence Programmer](#software-intro)
 - [Installation](#installation)
@@ -14,9 +17,11 @@ The Lightweight is a running/walking/cycling light with four RGB (red, green, bl
   - [macOS](#macos)
 - [Connecting Your Device](#connecting-your-device)
 - [Interface Overview](#interface-overview)
+- [Menu Bar](#menu-bar)
 - [Building a Sequence](#building-a-sequence)
 - [Previewing a Sequence](#previewing-a-sequence)
 - [Working with the Device](#working-with-the-device)
+  - [Device Connection](#device-connection)
   - [Set Active Sequence](#set-active-sequence)
   - [Set Sequence Visibility](#set-sequence-visibility)
   - [Live Colour Preview](#live-colour-preview)
@@ -25,11 +30,15 @@ The Lightweight is a running/walking/cycling light with four RGB (red, green, bl
   - [Reset Sequences to Default](#reset-sequences-to-default)
   - [Touch Settings](#touch-settings)
 - [The Sequence File Format](#the-sequence-file-format)
-- [Menu Bar](#menu-bar)
 - [Troubleshooting](#troubleshooting)
 - [FAQ](#faq)
 
 ---
+
+<a id="safety"></a>
+## ⚠️ Safety ⚠️
+
+WARNING: THIS PRODUCT IS NOT A TOY. The Lightweight contains small parts, strong magnets, and lithium polymer (LiPo) batteries that can pose severe fire hazards, choking hazards, or life-threatening internal injuries if swallowed or mistreated. Keep the device and its magnetic attachment completely out of reach of children and pets. To prevent fire or injury, never puncture, crush, or expose the device to extreme heat, and only charge it using a standard 5V DC power source. Please note that the battery will naturally self-discharge over time, so the device should be kept regularly charged to maintain optimal battery health. By using this product, you acknowledge that the manufacturer accepts no responsibility or liability for any damages, injuries, or losses incurred through misuse, failure to follow these safety instructions, or operation outside of normal intended conditions.
 
 ## Device Operation
 
@@ -39,13 +48,13 @@ The Lightweight device can be operated independently of the computer using its b
 
 * **Mode/Sequence Cycling:** Once the device is on, tap the sensor using your assigned mode/sequence configuration to cycle through your enabled sequences (default setting is 1 tap).
 
-* **Tap timing:** Taps in a sequence must follow one another in quick succession (roughly under half a second apart) — pausing longer than that tells the device you've finished tapping, and it acts on however many taps it counted. Holding the sensor down continuously for more than a couple of seconds cancels the tap sequence entirely, so a firm, quick tap works better than a long press.
+* **Tap timing:** Taps in a sequence must follow one another in quick succession (roughly under half a second apart) - pausing longer than that tells the device you've finished tapping, and it acts on however many taps it counted. Holding the sensor down continuously for more than a couple of seconds cancels the tap sequence entirely, so a firm, quick tap works better than a long press.
 
 * **Unplugging always powers the device off.** Whenever the USB-C cable is removed, the device shuts itself down completely, regardless of whether it was on or off at the time. After unplugging (e.g. once charging is finished), you'll need to use your power-tap gesture again to turn the light on.
 
 * **Low-battery shutdown:** if the battery voltage drops too low, the device automatically powers itself off to protect the battery.
 
-* Plugging the device into a computer or charger will power its electronics on (so the software can connect to it and so it can charge) even if the light itself is off. The lights stay off until you turn the device on, either with a power tap or from the software.
+* Plugging the device into a computer or charger will power its electronics on (so the software can connect to it and so it can charge) even if the light itself is off. The four RGB lights stay off until you turn the device on, either with a power tap or from the software. When the device is charging, a red light next to USB-C port will turn on, and turn off when the device is fully charged. Charging the device's battery from empty to full takes approximately 3 hours.
 
 ---
 
@@ -105,6 +114,35 @@ The window is split into two halves:
 
 A menu bar across the top gives you theme switching, help, update checks and app info.
 
+![Annotated software elements](Images/annotated_1.png)
+![Annotated software elements continuation](Images/annotated_2.png)
+
+The annotated screenshot above shows the following elements that will be described in more detail below:
+
+1. Menu bar
+2. New Step Block tile
+3. Sequence editor
+4. Preview square
+5. Device connection controls
+6. Active sequence controls
+7. Sequence visibility controls
+8. Live colour preview
+9. Sequence storage controls
+10. Reset sequences to default button
+11. Touch settings
+
+---
+
+## Menu Bar
+
+| Menu Item | Description |
+|---|---|
+| Exit | Closes the application |
+| Dark Mode / Light Mode | Toggles the app's colour theme (Dark Mode is the default on launch) |
+| Help | Shows a quick-start guide inside the app |
+| Check for Updates | Checks GitHub for a newer release and tells you if one is available |
+| About | Shows the current app version, developer credit, and a link to the End User License Agreement (EULA) |
+
 ---
 
 ## Building a Sequence
@@ -146,6 +184,10 @@ This lets you fine-tune timing and colours before spending time uploading to har
 ## Working with the Device
 
 All of the controls below live in the Device Panel on the right and require an active connection.
+
+### Device Connection
+
+After connecting to the device with a USB-C cable, click the Connect button. When you wish the disconnect, click the Disconnect button.
 
 ### Set Active Sequence
 
@@ -230,24 +272,16 @@ If a file doesn't follow this format exactly, Upload All Sequences will reject i
 
 ---
 
-## Menu Bar
-
-| Menu Item | Description |
-|---|---|
-| Exit | Closes the application |
-| Dark Mode / Light Mode | Toggles the app's colour theme (Dark Mode is the default on launch) |
-| Help | Shows a quick-start guide inside the app |
-| Check for Updates | Checks GitHub for a newer release and tells you if one is available |
-| About | Shows the current app version, developer credit, and a link to the End User License Agreement (EULA) |
-
----
-
 ## Troubleshooting
 
 **"Connect" fails / stays disconnected**
-- Make sure the device is plugged in via USB-C and powered.
+- Make sure the device is plugged in via a USB-C cable and powered.
 - Try a different USB cable or port - some cables are power-only and don't carry data.
 - Make sure no other program (including a previous instance of this app) is already holding the device open.
+- Unplug and replug the USB cable at the computer end, not the device end. 
+- Try using a USB-C to USB-C cable instead of a USB-A to USB-C cable if possible.
+- Avoid using a USB hub - plug the cable directly into the computer.
+
 
 **macOS says the app "can't be opened" or "is damaged"**
 - Right-click the app and choose Open instead of double-clicking, then confirm in the dialog. See [Installation → macOS](#macos).
