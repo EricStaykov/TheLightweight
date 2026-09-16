@@ -1,14 +1,15 @@
 # The Lightweight
 
-The Lightweight is a running/walking/cycling light with four RGB (red, green, blue) lights arranged in a square. It can display up to ten sequences that are fully customisable using the software.
+The Lightweight is a running/walking/cycling light with four RGB (red, green, blue) lights arranged in a square. It can display up to ten sequences that are fully customisable using the software running on Windows or macOS by connecting the device via a standard USC-C cable. The light is rechargeable with the same USC-C cable from a 5V DC power source such a computer or phone charger. 
 
 ---
 
 ## Table of Contents
 
 - [Requirements](#requirements)
-- [Device Operation)(#device-operation)
+- [Device Operation](#device-operation)
 - [The Lightweight - Pattern Programmer](#software-intro)
+- [Installation](#installation)
   - [Windows](#windows)
   - [macOS](#macos)
 - [Connecting Your Device](#connecting-your-device)
@@ -17,10 +18,12 @@ The Lightweight is a running/walking/cycling light with four RGB (red, green, bl
 - [Previewing a Pattern](#previewing-a-pattern)
 - [Working with the Device](#working-with-the-device)
   - [Set Active Sequence](#set-active-sequence)
+  - [Set Sequence Visibility](#set-sequence-visibility)
   - [Live Colour Preview](#live-colour-preview)
   - [Upload / Download a Single Sequence](#upload--download-a-single-sequence)
   - [Download All / Upload All Sequences](#download-all--upload-all-sequences)
   - [Reset Patterns to Default](#reset-patterns-to-default)
+  - [Touch Settings](#touch-settings)
 - [The Sequence File Format](#the-sequence-file-format)
 - [Menu Bar](#menu-bar)
 - [Troubleshooting](#troubleshooting)
@@ -30,11 +33,11 @@ The Lightweight is a running/walking/cycling light with four RGB (red, green, bl
 
 ## Device Operation
 
-Once configured, The Lightweight device can be operated independently of the computer using its built-in touch sensor.
+The Lightweight device can be operated independently of the computer using its built-in touch sensor at the centre of the clear plastic enclosure.
 
-* **Power Toggle:** Tap the sensor using your assigned power configuration to turn the device on or off, which defaults to 2 taps.
+* **Power Toggle:** Tap the sensor using your assigned power configuration to turn the device on or off (default setting is 2 taps).
 
-* **Mode/Sequence Cycling:** Tap the sensor using your assigned mode/sequence configuration to cycle through your enabled sequences, which defaults to 1 tap.
+* **Mode/Sequence Cycling:** Once the device is on, tap the sensor using your assigned mode/sequence configuration to cycle through your enabled sequences (default setting is 1 tap).
 
 ---
 
@@ -136,9 +139,13 @@ All of the controls below live in the Device Panel on the right and require an a
 
 The device stores up to 10 sequences (1–10). Use the Set Active Sequence box to pick a Sequence# and click Set to make that slot the one currently playing on the device.
 
+### Set Sequence Visibility 
+
+The checkboxes (1–10) let you choose which sequences are included in tap-cycling on the device. Click the "Apply Visibility Settings" button to apply your settings. Note that at least one sequence must be selected.
+
 ### Live Colour Preview
 
-Use the four colour swatches in Live Colour Preview to pick a one-off colour for each LED, then click Live Preview to instantly push that single frame to the physical device - useful for testing colours in real time without building or saving a full sequence.
+Use the four colour swatches in Live Colour Preview to pick a one-off colour for each LED, then click Live Preview to instantly push that single frame to the physical device - useful for testing colours in real time without building or saving a full sequence. The "Turn All LEDs Off/On" button sends a remote power-off/on command to the device (same as performing a power tap).
 
 ### Upload / Download a Single Sequence
 
@@ -157,6 +164,10 @@ See [The Sequence File Format](#the-sequence-file-format) below if you want to h
 ### Reset Patterns to Default
 
 Reset Patterns to Default restores the device's built-in factory patterns, erasing any custom sequences you've written. A confirmation dialog protects against accidental clicks - this action cannot be undone.
+
+### Touch Settings
+
+A dropdown lets you change how many taps trigger power (on/off) and sequence-cycling (options: 1/2 taps, 1/3 taps and 2/3 taps). Increasing the number of taps required helps prevent false triggers. Note that power-taps must be greater than mode-taps.
 
 ---
 
@@ -201,18 +212,18 @@ If a file doesn't follow this format exactly, Upload All Sequences will reject i
 
 ## Troubleshooting
 
-"Connect" fails / stays disconnected
+**"Connect" fails / stays disconnected**
 - Make sure the device is plugged in via USB-C and powered.
 - Try a different USB cable or port - some cables are power-only and don't carry data.
 - Make sure no other program (including a previous instance of this app) is already holding the device open.
 
-macOS says the app "can't be opened" or "is damaged"
+**macOS says the app "can't be opened" or "is damaged"**
 - Right-click the app and choose Open instead of double-clicking, then confirm in the dialog. See [Installation → macOS](#macos).
 
-Windows SmartScreen blocks the app
+**Windows SmartScreen blocks the app**
 - Click More info → Run anyway.
 
-Uploading or downloading sequences randomly fails
+**Uploading or downloading sequences randomly fails**
 - This might be caused by USB noise or a marginal cable/connection dropped or corrupted a byte in transit; the app automatically discards the bad packet. If it happens constantly, try a shorter or better-shielded USB cable.
 
 ---
@@ -220,10 +231,10 @@ Uploading or downloading sequences randomly fails
 ## FAQ
 
 **Can I run this without a physical device?**
-Yes - you can build and play back patterns entirely in the Pattern Builder without ever connecting hardware. You only need a connection to write to or read from the device itself.
+- Yes - you can build and play back patterns entirely in the Pattern Builder without ever connecting hardware. You only need a connection to write to or read from the device itself.
 
 **How many patterns can the device store?**
-10 sequences, each holding up to 64 steps.
+- 10 sequences, each holding up to 64 steps.
 
 **What's the difference between Solid and Transition steps?**
-Solid holds a fixed colour for the whole step. Transition fades from the previous step's colours into this step's colours over the step's duration, creating a smooth crossfade.
+- Solid holds a fixed colour for the whole step. Transition fades from the previous step's colours into this step's colours over the step's duration, creating a smooth crossfade.
