@@ -8,7 +8,6 @@ The Lightweight is a running/cycling/walking light with four RGB (red, green, bl
 
 ## Table of Contents
 
-- [Requirements](#requirements)
 - [Safety](#safety)
 - [Device Operation](#device-operation)
 - [The Lightweight - Sequence Programmer](#software-intro)
@@ -20,7 +19,7 @@ The Lightweight is a running/cycling/walking light with four RGB (red, green, bl
 - [Menu Bar](#menu-bar)
 - [Building a Sequence](#building-a-sequence)
 - [Previewing a Sequence](#previewing-a-sequence)
-- [Working with the Device](#working-with-the-device)
+- [Working With the Device](#working-with-the-device)
   - [Device Connection](#device-connection)
   - [Set Active Sequence](#set-active-sequence)
   - [Set Sequence Visibility](#set-sequence-visibility)
@@ -44,17 +43,17 @@ WARNING: THIS PRODUCT IS NOT A TOY. The Lightweight contains small parts, strong
 
 The Lightweight device can be operated independently of the computer using its built-in touch sensor at the centre of the clear plastic enclosure.
 
-* **Power Toggle:** Tap the sensor using your assigned power configuration to turn the device on or off (default setting is 2 taps).
+* **Power Toggle:** Tap the sensor to turn the device on or off (default setting is 2 taps).
 
-* **Mode/Sequence Cycling:** Once the device is on, tap the sensor using your assigned mode/sequence configuration to cycle through your enabled sequences (default setting is 1 tap).
+* **Mode/Sequence Cycling:** Once the device is on, tap the sensor to cycle through sequences (default setting is 1 tap).
 
 * **Tap timing:** Taps in a sequence must follow one another in quick succession (roughly under half a second apart) - pausing longer than that tells the device you've finished tapping, and it acts on however many taps it counted. Holding the sensor down continuously for more than a couple of seconds cancels the tap sequence entirely, so a firm, quick tap works better than a long press.
 
-* **Unplugging always powers the device off.** Whenever the USB-C cable is removed, the device shuts itself down completely, regardless of whether it was on or off at the time. After unplugging (e.g. once charging is finished), you'll need to use your power-tap gesture again to turn the light on.
+* **Unplugging always powers the device off.** Whenever the USB-C cable is removed, the device shuts itself down completely, regardless of whether it was on or off at the time. After unplugging (e.g. once charging is finished), you'll need to perform a power-tap again to turn the light on.
 
 * **Low-battery shutdown:** if the battery voltage drops too low, the device automatically powers itself off to protect the battery.
 
-* Plugging the device into a computer or charger will power its electronics on (so the software can connect to it and so it can charge) even if the light itself is off. The four RGB lights stay off until you turn the device on, either with a power tap or from the software. When the device is charging, a red light next to USB-C port will turn on, and turn off when the device is fully charged. Charging the device's battery from empty to full takes approximately 3 hours.
+* Plugging the device into a computer or charger will power its electronics on (so the software can connect to it and so it can charge) even if the light itself is off. The four RGB lights stay off until you turn the device on, either with a power tap or from the software. When the device is charging, a red light next to USB-C port will turn on, and turn off when the device is fully charged. Charging the device's battery from 0% to 100% takes approximately 3 hours.
 
 ---
 
@@ -69,8 +68,6 @@ This is a desktop application for designing, previewing and uploading custom lig
 - No other software needs to be installed - the `.exe` / `.app` bundles everything required to run
 
 > Note: On some systems the device driver stack (or macOS security settings) may need a one-time approval the first time you connect. See [Troubleshooting](#troubleshooting).
-
-The app opens in Dark Mode by default; use the menu bar to switch to Light Mode.
 
 ---
 
@@ -181,7 +178,7 @@ This lets you fine-tune timing and colours before spending time uploading to har
 
 ---
 
-## Working with the Device
+## Working With the Device
 
 All of the controls below live in the Device Panel on the right and require an active connection.
 
@@ -235,7 +232,7 @@ Reset Sequences to Default restores the device's ten built-in default sequences,
 
 8. Dual Orbit Chaser (16 steps). Two dots orbit the square in opposite directions. A pink dot goes clockwise, a cyan dot goes counter-clockwise. When they crash into the same light, it flashes bright white/purple.
 
-9. Law Enforcement Wig-Wag Strobe (40 steps). Emergency vehicle pattern. 4 fast red flashes left, 4 fast blue flashes right, pause, alternating dual flashes, followed by 3 white flashes from all lights.
+9. Law Enforcement Wig-Wag Strobe (40 steps). Emergency vehicle sequence. 4 fast red flashes left, 4 fast blue flashes right, pause, alternating dual flashes, followed by 3 white flashes from all lights.
 
 10. Crimson Heartbeat (16 steps). Biologically accurate heartbeat.
 
