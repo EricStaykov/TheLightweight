@@ -75,13 +75,13 @@ This is a desktop application for designing, previewing and uploading custom lig
 
 ### Windows
 
-1. Download the latest `TheLightweight.exe` from the [Windows App](https://github.com/EricStaykov/TheLightweight/) page.
+1. Download the latest `TheLightweight.exe` from the [Windows Software](https://github.com/EricStaykov/TheLightweight/tree/main/Windows%20Software) page.
 2. Double-click the `.exe` to launch it - no installer step is required.
 3. If Windows SmartScreen shows a warning, click More info → Run anyway.
 
 ### macOS
 
-1. Download the latest `TheLightweight-macOS.zip` from the [macOS App](https://github.com/EricStaykov/TheLightweight/) page.
+1. Download the latest `TheLightweight-macOS.zip` from the [macOS Software](https://github.com/EricStaykov/TheLightweight/tree/main/macOS%20Software) page.
 2. Unzip it and drag `TheLightweight.app` into your Applications folder.
 3. Because the app didn't come from the Mac App Store, the first launch requires one extra step:
    - Right-click (or Control-click) the app icon and choose Open, then confirm Open in the dialog that appears.
