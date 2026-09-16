@@ -1,6 +1,6 @@
 # The Lightweight
 
-The Lightweight is a running/walking/cycling light with four RGB (red, green, blue) lights arranged in a square. It can display up to ten sequences that are fully customisable using the software running on Windows or macOS by connecting the device via a standard USC-C cable. The light is rechargeable with the same USC-C cable from a 5V DC power source such a computer or phone charger. 
+The Lightweight is a running/walking/cycling light with four RGB (red, green, blue) lights arranged in a square. It can display up to ten sequences that are fully customisable using the software running on Windows or macOS by connecting the device via a standard USB-C cable. The light is rechargeable with the same USB-C cable from a 5V DC power source such as a computer or phone charger.
 
 ---
 
@@ -8,21 +8,21 @@ The Lightweight is a running/walking/cycling light with four RGB (red, green, bl
 
 - [Requirements](#requirements)
 - [Device Operation](#device-operation)
-- [The Lightweight - Pattern Programmer](#software-intro)
+- [The Lightweight - Sequence Programmer](#software-intro)
 - [Installation](#installation)
   - [Windows](#windows)
   - [macOS](#macos)
 - [Connecting Your Device](#connecting-your-device)
 - [Interface Overview](#interface-overview)
-- [Building a Pattern](#building-a-pattern)
-- [Previewing a Pattern](#previewing-a-pattern)
+- [Building a Sequence](#building-a-sequence)
+- [Previewing a Sequence](#previewing-a-sequence)
 - [Working with the Device](#working-with-the-device)
   - [Set Active Sequence](#set-active-sequence)
   - [Set Sequence Visibility](#set-sequence-visibility)
   - [Live Colour Preview](#live-colour-preview)
   - [Upload / Download a Single Sequence](#upload--download-a-single-sequence)
   - [Download All / Upload All Sequences](#download-all--upload-all-sequences)
-  - [Reset Patterns to Default](#reset-patterns-to-default)
+  - [Reset Sequences to Default](#reset-sequences-to-default)
   - [Touch Settings](#touch-settings)
 - [The Sequence File Format](#the-sequence-file-format)
 - [Menu Bar](#menu-bar)
@@ -39,11 +39,19 @@ The Lightweight device can be operated independently of the computer using its b
 
 * **Mode/Sequence Cycling:** Once the device is on, tap the sensor using your assigned mode/sequence configuration to cycle through your enabled sequences (default setting is 1 tap).
 
+* **Tap timing:** Taps in a sequence must follow one another in quick succession (roughly under half a second apart) — pausing longer than that tells the device you've finished tapping, and it acts on however many taps it counted. Holding the sensor down continuously for more than a couple of seconds cancels the tap sequence entirely, so a firm, quick tap works better than a long press.
+
+* **Unplugging always powers the device off.** Whenever the USB-C cable is removed, the device shuts itself down completely, regardless of whether it was on or off at the time. After unplugging (e.g. once charging is finished), you'll need to use your power-tap gesture again to turn the light on.
+
+* **Low-battery shutdown:** if the battery voltage drops too low, the device automatically powers itself off to protect the battery.
+
+* Plugging the device into a computer or charger will power its electronics on (so the software can connect to it and so it can charge) even if the light itself is off. The lights stay off until you turn the device on, either with a power tap or from the software.
+
 ---
 
-## The Lightweight - Pattern Programmer
+## The Lightweight - Sequence Programmer
 
-This is a desktop application for designing, previewing and uploading custom LED lighting patterns to The Lightweight device over USB. Build animations visually by dragging colour-and-timing "step blocks" into a sequence, preview them on screen, then push them straight to the device's memory.
+This is a desktop application for designing, previewing and uploading custom lighting sequences to The Lightweight device over USB. Build animations visually by dragging colour-and-timing "step blocks" into a sequence, preview them on screen, then push them straight to the device's memory.
 
 **Requirements:**
 
@@ -52,6 +60,8 @@ This is a desktop application for designing, previewing and uploading custom LED
 - No other software needs to be installed - the `.exe` / `.app` bundles everything required to run
 
 > Note: On some systems the device driver stack (or macOS security settings) may need a one-time approval the first time you connect. See [Troubleshooting](#troubleshooting).
+
+The app opens in Dark Mode by default; use the menu bar to switch to Light Mode.
 
 ---
 
@@ -75,11 +85,12 @@ This is a desktop application for designing, previewing and uploading custom LED
 
 ## Connecting Your Device
 
-1. Plug The Lightweight device into your computer with a USB-C cable.
+1. Plug The Lightweight device into your computer with a USB-C cable. This powers on the device's electronics (needed for the app to see it) even if the light itself is currently off.
 2. Launch the app.
 3. In the Device Connection panel (right-hand side), click Connect.
 4. A green dot and the text Connected confirm a successful connection. A red dot means the app could not open the device - see [Troubleshooting](#troubleshooting).
-5. Click Disconnect at any time to release the device (recommended before unplugging it).
+5. As soon as you connect, the app automatically reads the device's current Touch Settings and Sequence Visibility so the panels reflect what's actually stored on the device.
+6. Click Disconnect at any time to release the device (recommended before unplugging it). Note that physically unplugging the cable always turns the device off, whether or not you disconnected in the app first.
 
 ---
 
@@ -89,42 +100,43 @@ The window is split into two halves:
 
 | Side | Panel | Purpose |
 |---|---|---|
-| Left | Pattern Builder | Design a sequence of colour/timing steps and preview it on screen |
-| Right | Device Panel | Connect to the hardware and send/receive patterns, live colours and sequence changes |
+| Left | Sequence Builder | Design a sequence of colour/timing steps and preview it on screen |
+| Right | Device Panel | Connect to the hardware and send/receive sequences, live colours and sequence changes |
 
 A menu bar across the top gives you theme switching, help, update checks and app info.
 
 ---
 
-## Building a Pattern
+## Building a Sequence
 
-The Pattern Builder is where you design an animation before sending it to the device.
+The Sequence Builder is where you design an animation before sending it to the device.
 
-1. Drag a block in. In the palette box labelled *"Drag a block into the sequence below,"* drag the New Step Block tile down into the Pattern Sequence list. Each block you drop becomes one step in the animation.
+1. Drag a block in. In the palette box labelled *"Drag a block into the sequence below,"* drag the New Step Block tile down into the Sequence list. Each block you drop becomes one step in the animation. A sequence can hold up to 64 steps; once you hit that limit the palette is disabled until you remove a step.
 2. Edit a step. Click Edit on a step block to open its editor:
-   - LED Colours - four colour swatches, one per physical LED position (Top-Left, Top-Right, Bottom-Right, Bottom-Left). Click a swatch to open the colour picker.
-   - Timing - set the step's Duration (in milliseconds) and its Type:
-     - Solid - the four LED colours are held steady for the full duration.
-     - Transition - the LEDs fade from the previous step's colours into this step's colours over the duration.
+   - Light Colours - four colour swatches, one per physical light position (Top-Left, Top-Right, Bottom-Right, Bottom-Left). Click a swatch to open the colour picker.
+   - Timing - set the step's Duration (in milliseconds, 0–65535) and its Type:
+     - Solid - the four light colours are held steady for the full duration.
+     - Transition - the lights fade from the previous step's colours into this step's colours over the duration.
+     - **Duration = 0 is a special case:** the step is applied once and held forever - the sequence stops there and never advances to the next step. This is true both in the on-screen preview and on the physical device.
 3. Reorder steps. Drag a step block up or down within the sequence list to change playback order.
 4. Duplicate a step. Click Duplicate on any step block to insert a copy of it right after itself - handy for making small variations quickly.
 5. Delete a step. Click Delete to remove a step block from the sequence.
 6. Clear everything. Click Clear All Steps to empty the whole sequence (with a confirmation, since this can't be undone).
 
-Each step block shows a small live preview of its four colours and its duration so you can scan the whole sequence at a glance.
+Each step block shows a small live preview of its four colours and its duration so you can scan the whole sequence at a glance, along with a running "X / 64 steps" count.
 
 ---
 
-## Previewing a Pattern
+## Previewing a Sequence
 
-Above the sequence list, the big Preview square shows the same 2×2 LED layout as the physical device:
+Above the sequence list, the big Preview square shows the same 2×2 light layout as the physical device:
 
 ```
 [ Top-Left ]     [ Top-Right ]
 [ Bottom-Left ]  [ Bottom-Right ]
 ```
 
-- Click ▶ Play Preview to play the current sequence on screen exactly as it will run on the device (respecting each step's duration and solid/transition type).
+- Click ▶ Play Preview to play the current sequence on screen exactly as it will run on the device (respecting each step's duration and solid/transition type). If a step has a Duration of 0, playback will hold on that step indefinitely, exactly as it would on the device.
 - Click ■ Stop to stop playback at any time.
 
 This lets you fine-tune timing and colours before spending time uploading to hardware.
@@ -137,37 +149,57 @@ All of the controls below live in the Device Panel on the right and require an a
 
 ### Set Active Sequence
 
-The device stores up to 10 sequences (1–10). Use the Set Active Sequence box to pick a Sequence# and click Set to make that slot the one currently playing on the device.
+The device stores up to 10 sequences (1–10). Use the Set Active Sequence box to pick a Sequence# and click Set to make that slot the one currently playing on the device. This choice is remembered by the device, so it's also what will play the next time the device is turned on.
 
 ### Set Sequence Visibility 
 
-The checkboxes (1–10) let you choose which sequences are included in tap-cycling on the device. Click the "Apply Visibility Settings" button to apply your settings. Note that at least one sequence must be selected.
+The checkboxes (1–10) let you choose which sequences are included in tap-cycling on the device. Click the "Apply Visibility Settings" button to apply your settings. Note that at least one sequence must be selected. If you hide the sequence that's currently active, the device automatically switches itself to the next enabled sequence.
 
 ### Live Colour Preview
 
-Use the four colour swatches in Live Colour Preview to pick a one-off colour for each LED, then click Live Preview to instantly push that single frame to the physical device - useful for testing colours in real time without building or saving a full sequence. The "Turn All LEDs Off/On" button sends a remote power-off/on command to the device (same as performing a power tap).
+Use the four colour swatches in Live Colour Preview to pick a one-off colour for each light, then click Live Preview to instantly push that single frame to the physical device - useful for testing colours in real time without building or saving a full sequence. This works even if the device is currently turned off, so you can preview colours without powering the whole device on. The "Turn All Lights Off/On" button sends a remote power-off/on command to the device, which - while connected over USB - has the same effect as performing a power tap.
 
 ### Upload / Download a Single Sequence
 
-- ↑ Upload Sequence to The Lightweight - sends the pattern currently in the Pattern Builder to the Sequence# you select, overwriting whatever was stored there.
-- ↓ Download Sequence into Builder - pulls whatever is stored in the selected Sequence# on the device back into the Pattern Builder, so you can inspect or edit it.
+- ↑ Upload Sequence to The Lightweight - sends the sequence currently in the Sequence Builder to the Sequence# you select, overwriting whatever was stored there.
+- ↓ Download Sequence into Builder - pulls whatever is stored in the selected Sequence# on the device back into the Sequence Builder, so you can inspect or edit it.
 
 ### Download All / Upload All Sequences
 
 For backing up or restoring every sequence at once:
 
 - ↓ Download All Sequences - reads all 10 sequences off the device and saves them to a `.txt` text file of your choosing. Use this to back up your device's configuration before experimenting.
-- ↑ Upload All Sequences - loads a sequence `.txt` file from disk, validates it and (after you confirm) overwrites all 10 slots on the device with its contents. This is destructive and cannot be undone, so the app always asks for confirmation first.
+- ↑ Upload All Sequences - loads a sequence `.txt` file from disk, validates it and (after you confirm) overwrites all 10 slots on the device with its contents. This is destructive and cannot be undone, so the app always asks for confirmation first. Any sequence number not present in the file is uploaded as empty (0 steps) - you don't have to list all ten `[MODE n]` sections if some should end up blank.
 
 See [The Sequence File Format](#the-sequence-file-format) below if you want to hand-edit these files or generate them programmatically.
 
-### Reset Patterns to Default
+### Reset Sequences to Default
 
-Reset Patterns to Default restores the device's built-in factory patterns, erasing any custom sequences you've written. A confirmation dialog protects against accidental clicks - this action cannot be undone.
+Reset Sequences to Default restores the device's ten built-in default sequences, erasing any custom sequences you've written. Under the hood this happens in two steps: the app first tells the device to erase all 10 sequence slots, then it re-uploads the ten default sequences from the app itself, one slot at a time. Both steps need an uninterrupted connection - if the connection drops partway through, some slots may be left empty rather than restored, so make sure the device stays connected while this runs. A confirmation dialog protects against accidental clicks - this action cannot be undone. The ten default sequences are:
+
+1. Ultra-Smooth Rainbow Swirl (16 steps). A continuous gradient wheel across the 4 lights.
+
+2. Smooth Neon Pulse (16 steps). A smooth, breathing transition between pink and cyan. Top-Left and Bottom-Right fade pink, while Top-Right and Bottom-Left fade cyan in a continuous, elegant wave.
+
+3. Rear Bike Light Comet (16 steps). A spinning comet using exclusively shades of red for maximum visibility.
+
+4. Flashlight (Solid White). 
+
+5. Bioluminescent Ocean Tide (24 steps). A long loop simulating gentle waves. Deep ocean blue base with rolling crests of bioluminescent cyan and seafoam green.
+
+6. Radioactive Decay (32 steps). Erratic pulses, base shifts between sick yellows and greens, while individual lights occasionally snap to blinding white (radiation hits).
+
+7. Inferno (64 steps). Distinct flame characteristics per physical light position. Bottom lights are the fuel/core: consistently bright, mostly yellow/orange. Top lights are flame tips: darker, highly volatile, mostly red.
+
+8. Dual Orbit Chaser (16 steps). Two dots orbit the square in opposite directions. A pink dot goes clockwise, a cyan dot goes counter-clockwise. When they crash into the same light, it flashes bright white/purple.
+
+9. Law Enforcement Wig-Wag Strobe (40 steps). Emergency vehicle pattern. 4 fast red flashes left, 4 fast blue flashes right, pause, alternating dual flashes, followed by 3 white flashes from all lights.
+
+10. Crimson Heartbeat (16 steps). Biologically accurate heartbeat.
 
 ### Touch Settings
 
-A dropdown lets you change how many taps trigger power (on/off) and sequence-cycling (options: 1/2 taps, 1/3 taps and 2/3 taps). Increasing the number of taps required helps prevent false triggers. Note that power-taps must be greater than mode-taps.
+A dropdown lets you change how many taps trigger power (on/off) and sequence-cycling (options: 1/2 taps, 1/3 taps and 2/3 taps). Increasing the number of taps required helps prevent false triggers. Note that power-taps must be greater than mode-taps. The dropdown is automatically set to match the device's current setting when you connect.
 
 ---
 
@@ -187,10 +219,10 @@ STEP type=0 duration=1000 colours=0,0,0;0,0,0;0,0,0;0,0,0
 ```
 
 - Lines starting with `#` are comments and are ignored.
-- `[MODE n]` starts a new sequence, where `n` is between 1 and 10. Every sequence is listed once, even if it has no steps.
+- `[MODE n]` starts a new sequence, where `n` is between 1 and 10. Each mode number may appear at most once. `Download All Sequences` always writes out all ten `[MODE n]` sections, even empty ones, but when hand-editing or generating a file yourself you can omit sections entirely - any mode not listed will be uploaded as empty (0 steps).
 - Each `STEP` line under a mode defines one animation step:
   - `type` - `0` for Solid, `1` for Transition
-  - `duration` - step length in milliseconds (0–65535)
+  - `duration` - step length in milliseconds (0–65535). A duration of `0` means the step is held forever and the sequence never advances past it.
   - `colours` - four semicolon-separated `r,g,b` triples (0–255 each), in the order Top-Left; Top-Right; Bottom-Right; Bottom-Left
 - A sequence may have up to 64 steps.
 
@@ -203,10 +235,10 @@ If a file doesn't follow this format exactly, Upload All Sequences will reject i
 | Menu Item | Description |
 |---|---|
 | Exit | Closes the application |
-| Dark Mode / Light Mode | Toggles the app's colour theme |
+| Dark Mode / Light Mode | Toggles the app's colour theme (Dark Mode is the default on launch) |
 | Help | Shows a quick-start guide inside the app |
 | Check for Updates | Checks GitHub for a newer release and tells you if one is available |
-| About | Shows the current app version |
+| About | Shows the current app version, developer credit, and a link to the End User License Agreement (EULA) |
 
 ---
 
@@ -224,17 +256,20 @@ If a file doesn't follow this format exactly, Upload All Sequences will reject i
 - Click More info → Run anyway.
 
 **Uploading or downloading sequences randomly fails**
-- This might be caused by USB noise or a marginal cable/connection dropped or corrupted a byte in transit; the app automatically discards the bad packet. If it happens constantly, try a shorter or better-shielded USB cable.
+- This might be caused by USB noise or a marginal cable/connection corrupting a byte in transit. Every packet is checksummed, so a corrupted packet is always detected and dropped rather than being written to the device - but the app does not automatically retry, so the current operation will report a failure or time out. Simply try the action again. If it happens constantly, try a shorter or better-shielded USB cable.
 
 ---
 
 ## FAQ
 
 **Can I run this without a physical device?**
-- Yes - you can build and play back patterns entirely in the Pattern Builder without ever connecting hardware. You only need a connection to write to or read from the device itself.
+- Yes - you can build and play back sequences entirely in the Sequence Builder without ever connecting hardware. You only need a connection to write to or read from the device itself.
 
-**How many patterns can the device store?**
+**How many sequences can the device store?**
 - 10 sequences, each holding up to 64 steps.
 
 **What's the difference between Solid and Transition steps?**
-- Solid holds a fixed colour for the whole step. Transition fades from the previous step's colours into this step's colours over the step's duration, creating a smooth crossfade.
+- Solid holds a fixed colour for the whole step. Transition fades from the previous step's colours into this step's colours over the step's duration, creating a smooth crossfade. A step with a Duration of 0 holds its colour forever, regardless of type.
+
+**Why did my light turn off after I unplugged it from charging?**
+- This is expected: unplugging the USB-C cable always fully powers the device down. Use your power-tap gesture to turn it back on.
