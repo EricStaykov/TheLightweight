@@ -81,7 +81,7 @@ This is a desktop application for designing, previewing and uploading custom lig
 
 ### macOS
 
-1. Download the latest `TheLightweight-macOS.zip` from the [macOS Software](https://github.com/EricStaykov/TheLightweight/tree/main/macOS%20Software) page.
+1. Download the latest `TheLightweight-macos-15.zip` or `TheLightweight-macos-15-intel.zip` from the [macOS Software](https://github.com/EricStaykov/TheLightweight/tree/main/macOS%20Software) page depending on whether your computer has Apple Silicon (M-series chip designed by Apple) or an Intel processor.
 2. Unzip it and drag `TheLightweight.app` into your Applications folder.
 3. Because the app didn't come from the Mac App Store, the first launch requires one extra step:
    - Right-click (or Control-click) the app icon and choose Open, then confirm Open in the dialog that appears.
@@ -188,7 +188,7 @@ After connecting to the device with a USB-C cable, click the Connect button. Whe
 
 ### Set Active Sequence
 
-The device stores up to 10 sequences (1–10). Use the Set Active Sequence box to pick a Sequence# and click Set to make that slot the one currently playing on the device. This choice is remembered by the device, so it's also what will play the next time the device is turned on.
+The device stores up to 10 sequences (1–10). Use the Set Active Sequence box to pick a Sequence# and click Set to make that sequence the one currently playing on the device. This choice is remembered by the device, so it's also what will play the next time the device is turned on.
 
 ### Set Sequence Visibility 
 
@@ -208,33 +208,33 @@ Use the four colour swatches in Live Colour Preview to pick a one-off colour for
 For backing up or restoring every sequence at once:
 
 - ↓ Download All Sequences - reads all 10 sequences off the device and saves them to a `.txt` text file of your choosing. Use this to back up your device's configuration before experimenting.
-- ↑ Upload All Sequences - loads a sequence `.txt` file from disk, validates it and (after you confirm) overwrites all 10 slots on the device with its contents. This is destructive and cannot be undone, so the app always asks for confirmation first. Any sequence number not present in the file is uploaded as empty (0 steps) - you don't have to list all ten `[MODE n]` sections if some should end up blank.
+- ↑ Upload All Sequences - loads a sequence `.txt` file from disk, validates it and (after you confirm) overwrites all 10 sequences on the device with its contents. This is destructive and cannot be undone, so the app always asks for confirmation first. Any sequence number not present in the file is uploaded as empty (0 steps) - you don't have to list all ten `[MODE n]` sections if some should end up blank.
 
 See [The Sequence File Format](#the-sequence-file-format) below if you want to hand-edit these files or generate them programmatically.
 
 ### Reset Sequences to Default
 
-Reset Sequences to Default restores the device's ten built-in default sequences, erasing any custom sequences you've written. Under the hood this happens in two steps: the app first tells the device to erase all 10 sequence slots, then it re-uploads the ten default sequences from the app itself, one slot at a time. Both steps need an uninterrupted connection - if the connection drops partway through, some slots may be left empty rather than restored, so make sure the device stays connected while this runs. A confirmation dialog protects against accidental clicks - this action cannot be undone. The ten default sequences are:
+Reset Sequences to Default restores the device's ten built-in default sequences, erasing any custom sequences you've written. This action need an uninterrupted connection - if the connection drops partway through, some sequences may be left empty rather than restored, so make sure the device stays connected while this runs. A confirmation dialog protects against accidental clicks - this action cannot be undone. The ten default sequences are:
 
-1. Ultra-Smooth Rainbow Swirl (16 steps). A continuous gradient wheel across the 4 lights.
+1. **Ultra-Smooth Rainbow Swirl (16 steps).** A continuous gradient wheel across the 4 lights.
 
-2. Smooth Neon Pulse (16 steps). A smooth, breathing transition between pink and cyan. Top-Left and Bottom-Right fade pink, while Top-Right and Bottom-Left fade cyan in a continuous, elegant wave.
+2. **Smooth Neon Pulse (16 steps).** A smooth, breathing transition between pink and cyan. Top-Left and Bottom-Right fade pink, while Top-Right and Bottom-Left fade cyan in a continuous, elegant wave.
 
-3. Rear Bike Light Comet (16 steps). A spinning comet using exclusively shades of red for maximum visibility.
+3. **Rear Bike Light Comet (16 steps).** A spinning comet using exclusively shades of red for maximum visibility.
 
-4. Flashlight (Solid White). 
+4. **Flashlight (Solid White).** 
 
-5. Bioluminescent Ocean Tide (24 steps). A long loop simulating gentle waves. Deep ocean blue base with rolling crests of bioluminescent cyan and seafoam green.
+5. **Bioluminescent Ocean Tide (24 steps).** A long loop simulating gentle waves. Deep ocean blue base with rolling crests of bioluminescent cyan and seafoam green.
 
-6. Radioactive Decay (32 steps). Erratic pulses, base shifts between sick yellows and greens, while individual lights occasionally snap to blinding white (radiation hits).
+6. **Radioactive Decay (32 steps).** Erratic pulses, base shifts between sick yellows and greens, while individual lights occasionally snap to blinding white (radiation hits).
 
-7. Inferno (64 steps). Distinct flame characteristics per physical light position. Bottom lights are the fuel/core: consistently bright, mostly yellow/orange. Top lights are flame tips: darker, highly volatile, mostly red.
+7. **Inferno (64 steps).** Distinct flame characteristics per physical light position. Bottom lights are the fuel/core: consistently bright, mostly yellow/orange. Top lights are flame tips: darker, highly volatile, mostly red.
 
-8. Dual Orbit Chaser (16 steps). Two dots orbit the square in opposite directions. A pink dot goes clockwise, a cyan dot goes counter-clockwise. When they crash into the same light, it flashes bright white/purple.
+8. **Dual Orbit Chaser (16 steps).** Two dots orbit the square in opposite directions. A pink dot goes clockwise, a cyan dot goes counter-clockwise. When they crash into the same light, it flashes bright white/purple.
 
-9. Law Enforcement Wig-Wag Strobe (40 steps). Emergency vehicle sequence. 4 fast red flashes left, 4 fast blue flashes right, pause, alternating dual flashes, followed by 3 white flashes from all lights.
+9. **Law Enforcement Wig-Wag Strobe (40 steps).** Emergency vehicle sequence. 4 fast red flashes left, 4 fast blue flashes right, pause, alternating dual flashes, followed by 3 white flashes from all lights.
 
-10. Crimson Heartbeat (16 steps). Biologically accurate heartbeat.
+10. **Crimson Heartbeat (16 steps).** Biologically accurate heartbeat.
 
 ### Touch Settings
 
