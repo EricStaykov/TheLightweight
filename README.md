@@ -1,6 +1,6 @@
 # The Lightweight
 
-![Use Cases for The Lightweight](Images/use_cases.png)
+![Use Cases for The Lightweight](Images/use_cases.jpg)
 
 The Lightweight is a running/cycling/walking light with four RGB (red, green, blue) lights arranged in a square. It can display up to ten sequences that are fully customisable using the software running on Windows or macOS by connecting the device via a standard USB-C cable. To access the USB-C port, unscrew the lid of the enclosure. The light is rechargeable with the same USB-C cable from a 5V DC power source such as a computer or phone charger. The Lightweight comes with a separate magnetic attachment so that it can be attached to clothing or a backpack.
 
