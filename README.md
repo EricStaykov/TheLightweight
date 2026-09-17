@@ -51,7 +51,7 @@ The Lightweight device can be operated independently of the computer using its b
 
 * **Unplugging always powers the device off.** Whenever the USB-C cable is removed, the device shuts itself down completely, regardless of whether it was on or off at the time. After unplugging (e.g. once charging is finished), you'll need to perform a power-tap again to turn the light on.
 
-* **Low-battery shutdown:** if the battery voltage drops too low, the device automatically powers itself off to protect the battery.
+* **Low-battery shutdown:** if the battery charge drops too low, the device automatically powers itself off to protect the battery.
 
 * Plugging the device into a computer or charger will power its electronics on (so the software can connect to it and so it can charge) even if the light itself is off. The four RGB lights stay off until you turn the device on, either with a power tap or from the software. When the device is charging, a red light next to USB-C port will turn on, and turn off when the device is fully charged. Charging the device's battery from 0% to 100% takes approximately 3 hours.
 
@@ -59,7 +59,7 @@ The Lightweight device can be operated independently of the computer using its b
 
 ## The Lightweight - Sequence Programmer
 
-This is a desktop application for designing, previewing and uploading custom lighting sequences to The Lightweight device over USB. Build animations visually by dragging colour-and-timing "step blocks" into a sequence, preview them on screen, then push them straight to the device's memory.
+This is a desktop application for designing, previewing and uploading custom lighting sequences to The Lightweight device over USB. Build animations visually by dragging colour-and-timing "step blocks" into a sequence, preview them, then push them straight to the device's memory.
 
 **Requirements:**
 
@@ -67,7 +67,7 @@ This is a desktop application for designing, previewing and uploading custom lig
 - The Lightweight device connected via a USB-C cable
 - No other software needs to be installed - the `.exe` / `.app` bundles everything required to run
 
-> Note: On some systems the device driver stack (or macOS security settings) may need a one-time approval the first time you connect. See [Troubleshooting](#troubleshooting).
+> Note: Some computers may need a one-time approval the first time you connect. See [Troubleshooting](#troubleshooting).
 
 ---
 
@@ -106,7 +106,7 @@ The window is split into two halves:
 
 | Side | Panel | Purpose |
 |---|---|---|
-| Left | Sequence Builder | Design a sequence of colour/timing steps and preview it on screen |
+| Left | Sequence Builder | Design a sequence of colour/timing steps and preview it |
 | Right | Device Panel | Connect to the hardware and send/receive sequences, live colours and sequence changes |
 
 A menu bar across the top gives you theme switching, help, update checks and app info.
@@ -114,7 +114,7 @@ A menu bar across the top gives you theme switching, help, update checks and app
 ![Annotated software elements](Images/annotated_1.png)
 ![Annotated software elements continuation](Images/annotated_2.png)
 
-The annotated screenshot above shows the following elements that will be described in more detail below:
+The annotated screenshot above shows the following elements that are described in more detail below:
 
 1. Menu bar
 2. New Step Block tile
@@ -146,13 +146,13 @@ The annotated screenshot above shows the following elements that will be describ
 
 The Sequence Builder is where you design an animation before sending it to the device.
 
-1. Drag a block in. In the palette box labelled *"Drag a block into the sequence below,"* drag the New Step Block tile down into the Sequence list. Each block you drop becomes one step in the animation. A sequence can hold up to 64 steps; once you hit that limit the palette is disabled until you remove a step.
+1. Drag a block in. In the box labelled "Drag a block into the sequence below", drag the New Step Block tile down into the Sequence list. Each block you drop becomes one step in the animation. A sequence can hold up to 64 steps; once you hit that limit the palette is disabled until you remove a step.
 2. Edit a step. Click Edit on a step block to open its editor:
    - Light Colours - four colour swatches, one per physical light position (Top-Left, Top-Right, Bottom-Right, Bottom-Left). Click a swatch to open the colour picker.
    - Timing - set the step's Duration (in milliseconds, 0–65535) and its Type:
      - Solid - the four light colours are held steady for the full duration.
      - Transition - the lights fade from the previous step's colours into this step's colours over the duration.
-     - **Duration = 0 is a special case:** the step is applied once and held forever - the sequence stops there and never advances to the next step. This is true both in the on-screen preview and on the physical device.
+     - Duration = 0 is a special case: the step is applied once and held forever - the sequence stops there and never advances to the next step. This is true both in the on-screen preview and on the physical device.
 3. Reorder steps. Drag a step block up or down within the sequence list to change playback order.
 4. Duplicate a step. Click Duplicate on any step block to insert a copy of it right after itself - handy for making small variations quickly.
 5. Delete a step. Click Delete to remove a step block from the sequence.
@@ -174,7 +174,7 @@ Above the sequence list, the big Preview square shows the same 2×2 light layout
 - Click ▶ Play Preview to play the current sequence on screen exactly as it will run on the device (respecting each step's duration and solid/transition type). If a step has a Duration of 0, playback will hold on that step indefinitely, exactly as it would on the device.
 - Click ■ Stop to stop playback at any time.
 
-This lets you fine-tune timing and colours before spending time uploading to hardware.
+This lets you fine-tune timing and colours before uploading the sequence to the device.
 
 ---
 
@@ -188,7 +188,7 @@ After connecting to the device with a USB-C cable, click the Connect button. Whe
 
 ### Set Active Sequence
 
-The device stores up to 10 sequences (1–10). Use the Set Active Sequence box to pick a Sequence# and click Set to make that sequence the one currently playing on the device. This choice is remembered by the device, so it's also what will play the next time the device is turned on.
+The device stores up to 10 sequences (1-10). Use the Set Active Sequence box to pick a Sequence# and click Set to make that sequence the one currently playing on the device. This choice is remembered by the device, so it's also what will play the next time the device is turned on.
 
 ### Set Sequence Visibility 
 
@@ -218,15 +218,15 @@ Reset Sequences to Default restores the device's ten built-in default sequences,
 
 1. **Ultra-Smooth Rainbow Swirl (16 steps).** A continuous gradient wheel across the 4 lights.
 
-2. **Smooth Neon Pulse (16 steps).** A smooth, breathing transition between pink and cyan. Top-Left and Bottom-Right fade pink, while Top-Right and Bottom-Left fade cyan in a continuous, elegant wave.
+2. **Smooth Neon Pulse (16 steps).** A smooth, breathing transition between pink and cyan. Top-Left and Bottom-Right lights fade pink, while Top-Right and Bottom-Left fade cyan in a continuous, elegant wave.
 
-3. **Rear Bike Light Comet (16 steps).** A spinning comet using exclusively shades of red for maximum visibility.
+3. **Rear Bike Light Comet (16 steps).** A spinning comet using shades of red for maximum visibility.
 
 4. **Flashlight (Solid White).** 
 
 5. **Bioluminescent Ocean Tide (24 steps).** A long loop simulating gentle waves. Deep ocean blue base with rolling crests of bioluminescent cyan and seafoam green.
 
-6. **Radioactive Decay (32 steps).** Erratic pulses, base shifts between sick yellows and greens, while individual lights occasionally snap to blinding white (radiation hits).
+6. **Radioactive Decay (32 steps).** Erratic pulses, base shifts between yellows and greens, while individual lights occasionally snap to blinding white (radiation hits).
 
 7. **Inferno (64 steps).** Distinct flame characteristics per physical light position. Bottom lights are the fuel/core: consistently bright, mostly yellow/orange. Top lights are flame tips: darker, highly volatile, mostly red.
 
@@ -238,7 +238,7 @@ Reset Sequences to Default restores the device's ten built-in default sequences,
 
 ### Touch Settings
 
-A dropdown lets you change how many taps trigger power (on/off) and sequence-cycling (options: 1/2 taps, 1/3 taps and 2/3 taps). Increasing the number of taps required helps prevent false triggers. Note that power-taps must be greater than mode-taps. The dropdown is automatically set to match the device's current setting when you connect.
+A dropdown lets you change how many taps trigger power (on/off) and sequence-cycling (options: 1/2 taps, 1/3 taps and 2/3 taps). Increasing the number of taps required helps prevent false triggers. Note that the number of power-taps must be greater than mode-taps. The dropdown is automatically set to match the device's current setting when you connect to it.
 
 ---
 
@@ -303,4 +303,4 @@ If a file doesn't follow this format exactly, Upload All Sequences will reject i
 - Solid holds a fixed colour for the whole step. Transition fades from the previous step's colours into this step's colours over the step's duration, creating a smooth crossfade. A step with a Duration of 0 holds its colour forever, regardless of type.
 
 **Why did my light turn off after I unplugged it from charging?**
-- This is expected: unplugging the USB-C cable always fully powers the device down. Use your power-tap gesture to turn it back on.
+- This is expected: unplugging the USB-C cable always fully powers the device down. Perform a power-tap to turn it back on.
