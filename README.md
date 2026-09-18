@@ -220,7 +220,7 @@ Reset Sequences to Default restores the device's ten built-in default sequences,
 
 2. **Smooth Neon Pulse (16 steps).** A smooth, breathing transition between pink and cyan. Top-Left and Bottom-Right lights fade pink, while Top-Right and Bottom-Left fade cyan in a continuous, elegant wave.
 
-3. **Rear Bike Light Comet (16 steps).** A spinning comet using shades of red for maximum visibility.
+3. **Multi-Phase Rear Bike Light (64 steps).** Cycles through comet, strobe, pulse and alternating patterns using only shades of red.
 
 4. **Flashlight (Solid White).** 
 
