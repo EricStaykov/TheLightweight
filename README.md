@@ -293,7 +293,7 @@ If a file doesn't follow this format exactly, Upload All Sequences will reject i
 
 ## FAQ
 
-**Can I run this without a physical device?**
+**Can I use the software without a physical device?**
 - Yes - you can build and play back sequences entirely in the Sequence Builder without ever connecting hardware. You only need a connection to write to or read from the device itself.
 
 **How many sequences can the device store?**
