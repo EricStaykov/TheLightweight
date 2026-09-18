@@ -37,7 +37,7 @@ The Lightweight is a running/cycling/walking light with four RGB (red, green, bl
 <a id="safety"></a>
 ## ⚠️ Safety ⚠️
 
-WARNING: THIS PRODUCT IS NOT A TOY. The Lightweight contains small parts, strong magnets, and lithium polymer (LiPo) batteries that can pose severe fire hazards, choking hazards, or life-threatening internal injuries if swallowed or mistreated. Keep the device and its magnetic attachment completely out of reach of children and pets. To prevent fire or injury, never puncture, crush, or expose the device to extreme heat, and only charge it using a standard 5V DC power source. Please note that the battery will naturally self-discharge over time, so the device should be kept regularly charged to maintain optimal battery health. By using this product, you acknowledge that the manufacturer accepts no responsibility or liability for any damages, injuries, or losses incurred through misuse, failure to follow these safety instructions, or operation outside of normal intended conditions.
+WARNING: THIS PRODUCT IS NOT A TOY. The Lightweight contains small parts, strong magnets and lithium polymer (LiPo) batteries that can pose severe fire hazards, choking hazards or life-threatening internal injuries if swallowed or mistreated. Keep the device and its magnetic attachment completely out of reach of children and pets. To prevent fire or injury, never puncture, crush, submerge in water for more than a few seconds or expose the device to extreme heat and only charge it using a standard 5V DC power source. Please note that the battery will naturally self-discharge over time, so the device should be kept regularly charged to maintain optimal battery health. By using this product, you acknowledge that the manufacturer accepts no responsibility or liability for any damages, injuries or losses incurred through misuse, failure to follow these safety instructions or operation outside of normal intended conditions.
 
 ## Device Operation
 
@@ -47,13 +47,13 @@ The Lightweight device can be operated independently of the computer using its b
 
 * **Mode/Sequence Cycling:** Once the device is on, tap the sensor to cycle through sequences (default setting is 1 tap).
 
-* **Tap timing:** Taps in a sequence must follow one another in quick succession (roughly under half a second apart) - pausing longer than that tells the device you've finished tapping, and it acts on however many taps it counted. Holding the sensor down continuously for more than a couple of seconds cancels the tap sequence entirely, so a firm, quick tap works better than a long press.
+* **Tap timing:** Taps in a sequence must follow one another in quick succession (roughly under half a second apart) - pausing longer than that tells the device you've finished tapping and it acts on however many taps it counted. Holding the sensor down continuously for more than a couple of seconds cancels the tap sequence entirely, so a firm, quick tap works better than a long press.
 
 * **Unplugging always powers the device off.** Whenever the USB-C cable is removed, the device shuts itself down completely, regardless of whether it was on or off at the time. After unplugging (e.g. once charging is finished), you'll need to perform a power-tap again to turn the light on.
 
 * **Low-battery shutdown:** if the battery charge drops too low, the device automatically powers itself off to protect the battery.
 
-* Plugging the device into a computer or charger will power its electronics on (so the software can connect to it and so it can charge) even if the light itself is off. The four RGB lights stay off until you turn the device on, either with a power tap or from the software. When the device is charging, a red light next to USB-C port will turn on, and turn off when the device is fully charged. Charging the device's battery from 0% to 100% takes approximately 3 hours.
+* Plugging the device into a computer or charger will power its electronics on (so the software can connect to it and so it can charge) even if the light itself is off. The four RGB lights stay off until you turn the device on, either with a power tap or from the software. When the device is charging, a red light next to USB-C port will turn on and turn off when the device is fully charged. Charging the device's battery from 0% to 100% takes approximately 3 hours.
 
 ---
 
@@ -138,7 +138,7 @@ The annotated screenshot above shows the following elements that are described i
 | Dark Mode / Light Mode | Toggles the app's colour theme (Dark Mode is the default on launch) |
 | Help | Shows a quick-start guide inside the app |
 | Check for Updates | Checks GitHub for a newer release and tells you if one is available |
-| About | Shows the current app version, developer credit, and a link to the End User License Agreement (EULA) |
+| About | Shows the current app version, developer credit and a link to the End User License Agreement (EULA) |
 
 ---
 
@@ -244,7 +244,7 @@ A dropdown lets you change how many taps trigger power (on/off) and sequence-cyc
 
 ## The Sequence File Format
 
-Sequence `.txt` files are plain text and human-readable, so you can inspect, back up, version-control, or hand-edit them.
+Sequence `.txt` files are plain text and human-readable, so you can inspect, back up, version-control or hand-edit them.
 
 ```
 # THE_LIGHTWEIGHT_SEQUENCES v1
