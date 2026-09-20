@@ -37,7 +37,7 @@ The Lightweight is a running/cycling/walking light with four RGB (red, green, bl
 <a id="safety"></a>
 ## ⚠️ Safety ⚠️
 
-WARNING: THIS PRODUCT IS NOT A TOY. The Lightweight contains small parts, strong magnets and lithium polymer (LiPo) batteries that can pose severe fire hazards, choking hazards or life-threatening internal injuries if swallowed or mistreated. Keep the device and its magnetic attachment completely out of reach of children and pets. To prevent fire or injury, never puncture, crush, submerge in water for more than a few seconds or expose the device to extreme heat and only charge it using a standard 5V DC power source. Please note that the battery will naturally self-discharge over time, so the device should be kept regularly charged to maintain optimal battery health. By using this product, you acknowledge that the manufacturer accepts no responsibility or liability for any damages, injuries or losses incurred through misuse, failure to follow these safety instructions or operation outside of normal intended conditions.
+WARNING: THIS PRODUCT IS NOT A TOY. The Lightweight contains small parts, strong magnets and lithium polymer (LiPo) batteries that can pose severe fire hazards, choking hazards or life-threatening internal injuries if swallowed or mistreated. Keep the device and its magnetic attachment completely out of reach of children and pets, and away from pacemakers and medical implants. To prevent fire or injury, never puncture, crush, submerge in water for more than a few seconds or expose the device to extreme heat and only charge it using a standard 5V DC power source. Please note that the battery will naturally self-discharge over time, so the device should be kept regularly charged to maintain optimal battery health. By using this product, you acknowledge that the manufacturer accepts no responsibility or liability for any damages, injuries or losses incurred through misuse, failure to follow these safety instructions or operation outside of normal intended conditions.
 
 ## Device Operation
 
@@ -232,7 +232,7 @@ Reset Sequences to Default restores the device's ten built-in default sequences,
 
 8. **Dual Orbit Chaser (16 steps).** Two dots orbit the square in opposite directions. A pink dot goes clockwise, a cyan dot goes counter-clockwise. When they crash into the same light, it flashes bright white/purple.
 
-9. **Law Enforcement Wig-Wag Strobe (40 steps).** Emergency vehicle sequence. 4 fast red flashes left, 4 fast blue flashes right, pause, alternating dual flashes, followed by 3 white flashes from all lights.
+9. **Emergency Vehicle Wig-Wag Strobe (40 steps).** 4 fast red flashes left, 4 fast blue flashes right, pause, alternating dual flashes, followed by 3 white flashes from all lights. Do not use this sequence in public without proper authority.
 
 10. **Crimson Heartbeat (16 steps).** Biologically accurate heartbeat.
 
@@ -279,7 +279,6 @@ If a file doesn't follow this format exactly, Upload All Sequences will reject i
 - Try using a USB-C to USB-C cable instead of a USB-A to USB-C cable if possible.
 - Avoid using a USB hub - plug the cable directly into the computer.
 
-
 **macOS says the app "can't be opened" or "is damaged"**
 - Right-click the app and choose Open instead of double-clicking, then confirm in the dialog. See [Installation → macOS](#macos).
 
@@ -291,13 +290,28 @@ If a file doesn't follow this format exactly, Upload All Sequences will reject i
 
 ---
 
-## FAQ
+## Frequently Asked Questions (FAQ)
 
-**Can I use the software without a physical device?**
-- Yes - you can build and play back sequences entirely in the Sequence Builder without ever connecting hardware. You only need a connection to write to or read from the device itself.
+**How do I recharge it?**
+- To recharge the device, unscrew the enclosure lid to access the USB-C port, then connect it to a 5V DC power source (such as a computer or phone charger) using a standard USB-C cable. A red light next to the port remains lit while charging and turns off once fully charged. A complete charge from 0% to 100% takes approximately 3 hours.
+
+**Can I wash it?**
+- You can rinse the device and magnetic attachment under running water. Ensure the lid of the device is screwed on tightly before rinsing. Keep under running water for no more than 10 seconds. Do not submerge the device in water, as water can seep inside and cause damage. Wipe the exterior with a soft cloth, then unscrew the lid to let all individual parts air-dry completely.
+
+**Will the magnet work through a thick jacket?**
+- The magnet works through materials up to 10 mm thick. Hold strength decreases as thickness increases, so thinner fabrics will give the most secure attachment.
+
+**How do I reset it?**
+- The device comes preloaded with 10 default sequences and the free software has a button to reset all sequences to default. The software also allows you to backup your custom sequences to a file and restore sequences from the file to the device.
+
+**Does it work with my iPhone or Android phone?**
+- No, the software for the device can only run on Windows 10/11 and macOS 15+.
 
 **How many sequences can the device store?**
 - 10 sequences, each holding up to 64 steps.
+
+**Can I use the software without a physical device?**
+- Yes - you can build and play back sequences entirely in the Sequence Builder without ever connecting hardware. You only need a connection to write to or read from the device itself.
 
 **What's the difference between Solid and Transition steps?**
 - Solid holds a fixed colour for the whole step. Transition fades from the previous step's colours into this step's colours over the step's duration, creating a smooth crossfade. A step with a Duration of 0 holds its colour forever, regardless of type.
