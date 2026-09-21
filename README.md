@@ -292,29 +292,20 @@ If a file doesn't follow this format exactly, Upload All Sequences will reject i
 
 ## Frequently Asked Questions (FAQ)
 
-**How do I recharge it?**
-- To recharge the device, unscrew the enclosure lid to access the USB-C port, then connect it to a 5V DC power source (such as a computer or phone charger) using a standard USB-C cable. A red light next to the port remains lit while charging and turns off once fully charged. A complete charge from 0% to 100% takes approximately 3 hours.
+- **How do I recharge it?** To recharge the device, unscrew the enclosure lid to access the USB-C port, then connect it to a 5V DC power source (such as a computer or phone charger) using a standard USB-C cable. A red light next to the port remains lit while charging and turns off once fully charged. A complete charge from 0% to 100% takes approximately 3 hours.
 
-**Can I wash it?**
-- You can rinse the device and magnetic attachment under running water. Ensure the lid of the device is screwed on tightly before rinsing. Keep under running water for no more than 10 seconds. Do not submerge the device in water, as water can seep inside and cause damage. Wipe the exterior with a soft cloth, then unscrew the lid to let all individual parts air-dry completely.
+- **Can I wash it?** You can rinse the device and magnetic attachment under running water. Ensure the lid of the device is screwed on tightly before rinsing. Keep under running water for no more than 10 seconds. Do not submerge the device in water, as water can seep inside and cause damage. Wipe the exterior with a soft cloth, then unscrew the lid to let all individual parts air-dry completely.
 
-**Will the magnet work through a thick jacket?**
-- The magnet works through materials up to 10 mm thick. Hold strength decreases as thickness increases, so thinner fabrics will give the most secure attachment.
+- **Will the magnet work through a thick jacket?** The magnet works through materials up to 10 mm thick. Hold strength decreases as thickness increases, so thinner fabrics will give the most secure attachment.
 
-**How do I reset it?**
-- The device comes preloaded with 10 default sequences and the free software has a button to reset all sequences to default. The software also allows you to backup your custom sequences to a file and restore sequences from the file to the device.
+- **How do I reset it?** The device comes preloaded with 10 default sequences and the free software has a button to reset all sequences to default. The software also allows you to backup your custom sequences to a file and restore sequences from the file to the device.
 
-**Does it work with my iPhone or Android phone?**
-- No, the software for the device can only run on Windows 10/11 and macOS 15+.
+- **Does it work with my iPhone or Android phone?** No, the software for the device can only run on Windows 10/11 and macOS 15+.
 
-**How many sequences can the device store?**
-- 10 sequences, each holding up to 64 steps.
+- **How many sequences can the device store?** 10 sequences, each holding up to 64 steps.
 
-**Can I use the software without a physical device?**
-- Yes - you can build and play back sequences entirely in the Sequence Builder without ever connecting hardware. You only need a connection to write to or read from the device itself.
+- **Can I use the software without a physical device?** Yes - you can build and play back sequences entirely in the Sequence Builder without ever connecting hardware. You only need a connection to write to or read from the device itself.
 
-**What's the difference between Solid and Transition steps?**
-- Solid holds a fixed colour for the whole step. Transition fades from the previous step's colours into this step's colours over the step's duration, creating a smooth crossfade. A step with a Duration of 0 holds its colour forever, regardless of type.
+- **What's the difference between Solid and Transition steps?** Solid holds a fixed colour for the whole step. Transition fades from the previous step's colours into this step's colours over the step's duration, creating a smooth crossfade. A step with a Duration of 0 holds its colour forever, regardless of type.
 
-**Why did my light turn off after I unplugged it from charging?**
-- This is expected: unplugging the USB-C cable always fully powers the device down. Perform a power-tap to turn it back on.
+- **Why did my light turn off after I unplugged it from charging?** This is expected: unplugging the USB-C cable always fully powers the device down. Perform a power-tap to turn it back on.
