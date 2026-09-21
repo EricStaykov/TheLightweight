@@ -271,22 +271,19 @@ If a file doesn't follow this format exactly, Upload All Sequences will reject i
 
 ## Troubleshooting
 
-**"Connect" fails / stays disconnected**
-- Make sure the device is plugged in via a USB-C cable and powered.
-- Try a different USB cable or port - some cables are power-only and don't carry data.
-- Make sure no other program (including a previous instance of this app) is already holding the device open.
-- Unplug and replug the USB cable at the computer end, not the device end. 
-- Try using a USB-C to USB-C cable instead of a USB-A to USB-C cable if possible.
-- Avoid using a USB hub - plug the cable directly into the computer.
+- **"Connect" fails / stays disconnected**.
+1. Make sure the device is plugged in via a USB-C cable and powered.
+2. Try a different USB cable or port - some cables are power-only and don't carry data.
+3. Make sure no other program (including a previous instance of this app) is already holding the device open.
+4. Unplug and replug the USB cable at the computer end, not the device end. 
+5. Try using a USB-C to USB-C cable instead of a USB-A to USB-C cable if possible.
+6. Avoid using a USB hub - plug the cable directly into the computer.
 
-**macOS says the app "can't be opened" or "is damaged"**
-- Right-click the app and choose Open instead of double-clicking, then confirm in the dialog. See [Installation → macOS](#macos).
+- **macOS says the app "can't be opened" or "is damaged"**. Right-click the app and choose Open instead of double-clicking, then confirm in the dialog. See [Installation → macOS](#macos).
 
-**Windows SmartScreen blocks the app**
-- Click More info → Run anyway.
+- **Windows SmartScreen blocks the app**. Click More info → Run anyway.
 
-**Uploading or downloading sequences randomly fails**
-- This might be caused by USB noise or a marginal cable/connection corrupting a byte in transit. Simply try the action again. If it happens constantly, try a shorter or better-shielded USB cable.
+- **Uploading or downloading sequences randomly fails**. This might be caused by USB noise or a marginal cable/connection corrupting a byte in transit. Simply try the action again. If it happens constantly, try a shorter or better-shielded USB cable.
 
 ---
 
