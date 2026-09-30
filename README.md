@@ -271,7 +271,9 @@ If a file doesn't follow this format exactly, Upload All Sequences will reject i
 
 ## Troubleshooting
 
-- **"Connect" fails / stays disconnected**.
+- **Device does not charge.** Ensure the source of power is turned on. Unplug then reconnect the USB cable. The red charging light next to USB connector should be bright when charging and dim when charging is finished.
+
+- **"Connect" fails / stays disconnected.**
 1. Make sure the device is plugged in via a USB-C cable and powered.
 2. Try a different USB cable or port - some cables are power-only and don't carry data.
 3. Make sure no other program (including a previous instance of this app) is already holding the device open.
@@ -279,19 +281,21 @@ If a file doesn't follow this format exactly, Upload All Sequences will reject i
 5. Try using a USB-C to USB-C cable instead of a USB-A to USB-C cable if possible.
 6. Avoid using a USB hub - plug the cable directly into the computer.
 
-- **macOS says the app "can't be opened" or "is damaged"**. Right-click the app and choose Open instead of double-clicking, then confirm in the dialog. See [Installation → macOS](#macos).
+- **macOS says the app "can't be opened" or "is damaged".** Right-click the app and choose Open instead of double-clicking, then confirm in the dialog. See [Installation → macOS](#macos).
 
-- **Windows SmartScreen blocks the app**. Click More info → Run anyway.
+- **Windows SmartScreen blocks the app.** Click More info → Run anyway.
 
-- **Uploading or downloading sequences randomly fails**. This might be caused by USB noise or a marginal cable/connection corrupting a byte in transit. Simply try the action again. If it happens constantly, try a shorter or better-shielded USB cable.
+- **Uploading or downloading sequences randomly fails.** This might be caused by USB noise or a marginal cable/connection corrupting a byte in transit. Simply try the action again. If it happens constantly, try a shorter or better-shielded USB cable.
 
 ---
 
 ## Frequently Asked Questions (FAQ)
 
-- **How do I recharge it?** To recharge the device, unscrew the enclosure lid to access the USB-C port, then connect it to a 5V DC power source (such as a computer or phone charger) using a standard USB-C cable. A red light next to the port remains lit while charging and turns off once fully charged. A complete charge from 0% to 100% takes approximately 3 hours.
+- **How do I recharge it?** To recharge the device, unscrew the enclosure lid to access the USB-C port, then connect it to a 5V DC power source (such as a computer or phone charger) using a standard USB-C cable. A red light next to the port remains brightly lit while charging and becomes dim once fully charged. A complete charge from 0% to 100% takes approximately 3 hours.
 
 - **Can I wash it?** You can rinse the device and magnetic attachment under running water. Ensure the lid of the device is screwed on tightly before rinsing. Keep under running water for no more than 10 seconds. Do not submerge the device in water, as water can seep inside and cause damage. Wipe the exterior with a soft cloth, then unscrew the lid to let all individual parts air-dry completely.
+
+- **Can I operate it while using gloves?** The device's touch sensor can be activated using gloves up to 4 mm thick.
 
 - **Will the magnet work through a thick jacket?** The magnet works through materials up to 10 mm thick. Hold strength decreases as thickness increases, so thinner fabrics will give the most secure attachment.
 
@@ -305,4 +309,4 @@ If a file doesn't follow this format exactly, Upload All Sequences will reject i
 
 - **What's the difference between Solid and Transition steps?** Solid holds a fixed colour for the whole step. Transition fades from the previous step's colours into this step's colours over the step's duration, creating a smooth crossfade. A step with a Duration of 0 holds its colour forever, regardless of type.
 
-- **Why did my light turn off after I unplugged it from charging?** This is expected: unplugging the USB-C cable always fully powers the device down. Perform a power-tap to turn it back on.
+- **Why did my light turn off after I unplugged it from charging?** This is expected: unplugging the USB-C cable always fully powers the device down. Perform a power-tap to turn it back on. Similarly, connecting the device to a source of power will turn the light off.
