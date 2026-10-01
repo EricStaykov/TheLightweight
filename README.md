@@ -271,7 +271,7 @@ If a file doesn't follow this format exactly, Upload All Sequences will reject i
 
 ## Troubleshooting
 
-- **Device does not charge.** Ensure the source of power is turned on. Unplug then reconnect the USB cable. The red charging light next to USB connector should be bright when charging and dim when charging is finished.
+- **Device does not charge.** Ensure the source of power is turned on. Unplug then reconnect the USB cable. Try a different USB-C cable or charger. The red charging light next to USB connector should be bright when charging and dim when charging is finished.
 
 - **"Connect" fails / stays disconnected.**
 1. Make sure the device is plugged in via a USB-C cable and powered.
