@@ -1,4 +1,4 @@
-# The Lightweight
+# The Lightweight - User Manual
 
 ![Use Cases for The Lightweight](Images/use_cases.jpg)
 
@@ -30,7 +30,7 @@ The Lightweight is a running/cycling/walking light with four RGB (red, green, bl
   - [Touch Settings](#touch-settings)
 - [The Sequence File Format](#the-sequence-file-format)
 - [Troubleshooting](#troubleshooting)
-- [FAQ](#faq)
+- [Frequently Asked Questions (FAQ)](#frequently-asked-questions-faq)
 
 ---
 
@@ -222,7 +222,7 @@ Reset Sequences to Default restores the device's ten built-in default sequences,
 
 3. **Multi-Phase Rear Bike Light (64 steps).** Cycles through comet, strobe, pulse and alternating patterns using only shades of red.
 
-4. **Flashlight (Solid White).** 
+4. **Flashlight (solid white, full brightness).** 
 
 5. **Bioluminescent Ocean Tide (24 steps).** A long loop simulating gentle waves. Deep ocean blue base with rolling crests of bioluminescent cyan and seafoam green.
 
@@ -273,6 +273,8 @@ If a file doesn't follow this format exactly, Upload All Sequences will reject i
 
 - **Device does not charge.** Ensure the source of power is turned on. Unplug then reconnect the USB cable. Try a different USB-C cable or charger. The red charging light next to USB connector should be bright when charging and dim when charging is finished.
 
+- **Device turns off shortly after turning it on.** The battery is flat - please recharge the device (see [FAQ](#frequently-asked-questions-faq)).
+
 - **"Connect" fails / stays disconnected.**
 1. Make sure the device is plugged in via a USB-C cable and powered.
 2. Try a different USB cable or port - some cables are power-only and don't carry data.
@@ -281,11 +283,13 @@ If a file doesn't follow this format exactly, Upload All Sequences will reject i
 5. Try using a USB-C to USB-C cable instead of a USB-A to USB-C cable if possible.
 6. Avoid using a USB hub - plug the cable directly into the computer.
 
-- **macOS says the app "can't be opened" or "is damaged".** Right-click the app and choose Open instead of double-clicking, then confirm in the dialog. See [Installation → macOS](#macos).
+- **Uploading or downloading sequences randomly fails.** This might be caused by USB noise or a marginal cable/connection corrupting a byte in transit. Simply try the action again. If it happens constantly, try a shorter or better-shielded USB cable.
 
 - **Windows SmartScreen blocks the app.** Click More info → Run anyway.
 
-- **Uploading or downloading sequences randomly fails.** This might be caused by USB noise or a marginal cable/connection corrupting a byte in transit. Simply try the action again. If it happens constantly, try a shorter or better-shielded USB cable.
+- **Windows quarantines the app.** Confirm that you downloaded the genuine application from our official source ([here](https://github.com/EricStaykov/TheLightweight)). Open Windows Security → Virus & threat protection → Protection history. Windows Security may provide an "Allow on device" or "Restore" option for `TheLightweight.exe`.
+
+- **macOS says the app "can't be opened" or "is damaged".** Right-click the app and choose Open instead of double-clicking, then confirm in the dialog. See [Installation → macOS](#macos).
 
 ---
 
