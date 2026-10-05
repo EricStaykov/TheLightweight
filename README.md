@@ -287,7 +287,7 @@ If a file doesn't follow this format exactly, Upload All Sequences will reject i
 
 - **Windows SmartScreen blocks the app.** Click More info → Run anyway.
 
-- **Windows quarantines the app.** Confirm that you downloaded the genuine application from our official source ([here](https://github.com/EricStaykov/TheLightweight/tree/main/Windows%20Software)). Open Windows Security → Virus & threat protection → Protection history. Windows Security may provide an "Allow on device" or "Restore" option for `TheLightweight.exe`.
+- **Windows quarantines the app.** Confirm that you downloaded the genuine application from our official source ([here](https://github.com/EricStaykov/TheLightweight/tree/main/Windows%20Software)). If so, open Windows Security → Virus & threat protection → Protection history. Windows Security may provide an "Allow on device" or "Restore" option for `TheLightweight.exe`.
 
 - **macOS says the app "can't be opened" or "is damaged".** Right-click the app and choose Open instead of double-clicking, then confirm in the dialog. See [Installation → macOS](#macos).
 
