@@ -10,6 +10,7 @@ The Lightweight is a running/cycling/walking light with four RGB (red, green, bl
 
 - [Safety](#safety)
 - [Device Operation](#device-operation)
+- [Bike-Mount Instructions](#bike-mount-instructions)
 - [The Lightweight - Sequence Programmer](#software-intro)
 - [Installation](#installation)
   - [Windows](#windows)
@@ -39,6 +40,8 @@ The Lightweight is a running/cycling/walking light with four RGB (red, green, bl
 
 WARNING: THIS PRODUCT IS NOT A TOY. The Lightweight contains small parts, strong magnets and lithium polymer (LiPo) batteries that can pose severe fire hazards, choking hazards or life-threatening internal injuries if swallowed or mistreated. Keep the device and its magnetic attachment completely out of reach of children and pets, and away from pacemakers and medical implants. To prevent fire or injury, never puncture, crush, submerge in water or expose the device to extreme heat, and only charge it using a standard 5V DC power source. Please note that the battery will naturally self-discharge over time, so the device should be kept regularly charged to maintain optimal battery health. This is a safety light only - it is designed for visibility, not navigation. The beam is not focused enough to replace a proper torch for navigating unlit ground. By using this product, you acknowledge that the manufacturer accepts no responsibility or liability for any damages, injuries or losses incurred through misuse, failure to follow these safety instructions or operation outside of normal intended conditions.
 
+---
+
 ## Device Operation
 
 The Lightweight device can be operated independently of the computer using its built-in touch sensor at the centre of the clear plastic enclosure.
@@ -54,6 +57,16 @@ The Lightweight device can be operated independently of the computer using its b
 * **Low-battery shutdown:** if the battery charge drops too low, the device automatically powers itself off to protect the battery.
 
 * Plugging the device into a computer or charger will power its electronics on (so the software can connect to it and so it can charge) even if the light itself is off. The four RGB lights stay off until you turn the device on, either with a power tap or from the software. When the device is charging, a red light next to USB-C port will turn on and turn off when the device is fully charged. Charging the device's battery from 0% to 100% takes approximately 3 hours.
+
+---
+
+## Bike-Mount Instructions
+
+If you have the bike-compatible magnetic attachment, thread a 4.5 mm × 200 mm cable tie through both holes as shown below. Wrap the cable tie securely around your handlebars or seatpost.
+
+![Bike-Mount Magnetic Attachment 1](Images/bike_mount_1.jpg)
+
+![Bike-Mount Magnetic Attachment 2](Images/bike_mount_2.jpg)
 
 ---
 
